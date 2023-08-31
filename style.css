@@ -260,13 +260,29 @@ main {
 	outline: solid transparent;
 }
 
-.success {
+.error {
+	color: hsl(0, 100%, 70%);
+	background-color: hsl(0, 100%, 95%);
+}
+.error,
+.error:hover,
+.error:focus {
+	border: 1px solid hsl(0, 100%, 70%);
+}
+.error:focus {
+	color: var(--clr-neutral-1);
+}
+.error-message {
+	color: hsl(0, 100%, 70%);
+}
+
+.success-message {
 	display: none;
 	height: 100%;
 	padding: 2rem;
 	transition: 0.15s;
 }
-.success > .container {
+.success-message > .container {
 	padding: 0;
 }
 
@@ -284,7 +300,7 @@ main {
 	.form-section {
 		padding: 1rem;
 	}
-	.success {
+	.success-message {
 		max-width: 500px;
 		gap: 2.75rem;
 		padding: 3.5rem;

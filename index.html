@@ -7,7 +7,7 @@
   <meta name="description" content="Newsletter Sign-up Form with Success Message Solution for Frontendmentor.io">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
+  <script defer src="index.js"></script>
   <title>Frontend Mentor | Newsletter Sign-up Form</title>
 </head>
 
@@ -38,21 +38,21 @@
         </div>
         <form id="form" class="flex flex-col gap-2" name="signup-form" action="#">
           <div class="fs-body-2 fw-bold flex flex-col">
-            <div class="flex flex-row pb-1">
+            <div class="flex flex-row space-between pb-1">
               <label for="email">Email address</label>
               <p class="error-message"></p>
             </div>
-            <input class="email fs-body-1 fw-regular" type="text" name="email" id="emailAddress" autocomplete="off"
-              placeholder="email@company.com" required>
+            <input class="email fs-body-1 fw-regular" type="text" name="email" autocomplete="off"
+              pattern="[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}" placeholder="email@company.com" required>
           </div>
-          <input id="submitBtn" class="btn" type="submit" value="Subscribe to monthly newsletter">
+          <button id="submitBtn" class="btn" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
     </div>
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
-    <div class="success flex flex-col">
+    <div class="success-message flex flex-col">
       <div class="container flex flex-col">
         <img src="./assets/images/icon-success.svg" width="67px" height="67px" alt="">
         <div class="container_text flex flex-col">
