@@ -9,10 +9,12 @@ const subscribe = () => {
 		const dismissBtn = document.getElementById('dismissBtn');
 		const inputEmail = document.getElementById('inputEmail');
 
-		const emailPattern = new RegExp(emailAddress.pattern);
-		const testPattern = emailPattern.test(emailAddress.value);
+		const testEmail = () => {
+			const emailPattern = new RegExp(emailAddress.pattern);
+			return (testPattern = emailPattern.test(emailAddress.value));
+		};
 
-		if (testPattern === false) {
+		if (!testEmail()) {
 			errorMessage.textContent = 'Valid email required';
 			emailAddress.classList.add('error');
 		} else {
@@ -22,6 +24,16 @@ const subscribe = () => {
 			successMessage.style.display = 'flex';
 			inputEmail.textContent = emailAddress.value;
 		}
+
+		emailAddress.addEventListener('input', () => {
+			if (!testEmail()) {
+				errorMessage.textContent = 'Valid email required';
+				emailAddress.classList.add('error');
+			} else {
+				errorMessage.textContent = '';
+				emailAddress.classList.remove('error');
+			}
+		});
 
 		dismissBtn.addEventListener('click', () => {
 			emailAddress.value = '';
