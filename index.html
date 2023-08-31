@@ -16,10 +16,10 @@
     <!-- Sign-up form start -->
     <div class="form-section flex">
       <picture>
-        <source media="(max-width: 959px)" type="image/svg+xml" srcset="./assets/images/illustration-sign-up-mobile.svg"
-          width="100%">
+        <source media="(max-width: 959px)" type="image/svg+xml"
+          srcset="./assets/images/illustration-sign-up-mobile.svg">
         <source media="(min-width: 960px)" type="image/svg+xml"
-          srcset="./assets/images/illustration-sign-up-desktop.svg" width="100%">
+          srcset="./assets/images/illustration-sign-up-desktop.svg">
         <img class="img" src="./assets/images/illustration-sign-up-mobile.svg" alt="">
       </picture>
       <div class="container flex flex-col">
@@ -42,7 +42,7 @@
               <label for="email">Email address</label>
               <p class="error-message"></p>
             </div>
-            <input class="email fs-body-1 fw-regular" type="text" name="email" autocomplete="off"
+            <input id="email" class="email fs-body-1 fw-regular" type="email" autocomplete="off"
               pattern="[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}" placeholder="email@company.com" required>
           </div>
           <button id="submitBtn" class="btn" type="submit">Subscribe to monthly newsletter</button>
@@ -54,7 +54,7 @@
     <!-- Success message start -->
     <div class="success-message flex flex-col">
       <div class="container flex flex-col">
-        <img src="./assets/images/icon-success.svg" width="67px" height="67px" alt="">
+        <img src="./assets/images/icon-success.svg" width="67" height="67" alt="">
         <div class="container_text flex flex-col">
           <h1>Thanks for subscribing!</h1>
           <p>A confirmation email has been sent to <b><span id="inputEmail"></span></b>.
