@@ -17,9 +17,11 @@ const subscribe = () => {
 		if (!testEmail()) {
 			errorMessage.textContent = 'Valid email required';
 			emailAddress.classList.add('error');
+			emailAddress.classList.remove('success');
 		} else {
 			errorMessage.textContent = '';
 			emailAddress.classList.remove('error');
+			emailAddress.classList.add('success');
 			formSection.style.display = 'none';
 			successMessage.style.display = 'flex';
 			inputEmail.textContent = emailAddress.value;
@@ -29,14 +31,17 @@ const subscribe = () => {
 			if (!testEmail()) {
 				errorMessage.textContent = 'Valid email required';
 				emailAddress.classList.add('error');
+				emailAddress.classList.remove('success');
 			} else {
 				errorMessage.textContent = '';
 				emailAddress.classList.remove('error');
+				emailAddress.classList.add('success');
 			}
 		});
 
 		dismissBtn.addEventListener('click', () => {
 			emailAddress.value = '';
+			emailAddress.classList.remove('success');
 			formSection.style.display = 'flex';
 			successMessage.style.display = 'none';
 		});

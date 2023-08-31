@@ -269,11 +269,25 @@ main {
 .error:focus {
 	border: 1px solid hsl(0, 100%, 70%);
 }
-.error:focus {
-	color: var(--clr-neutral-1);
-}
+
 .error-message {
 	color: hsl(0, 100%, 70%);
+}
+
+.success {
+	color: hsl(120, 100%, 25%);
+	background-color: hsl(120, 100%, 95%);
+}
+
+.success,
+.success:hover,
+.success:focus {
+	border: 1px solid hsl(120, 100%, 25%);
+}
+
+.success:focus,
+.error:focus {
+	color: var(--clr-neutral-1);
 }
 
 .success-message {
