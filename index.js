@@ -6,7 +6,8 @@ const subscribe = () => {
 		const errorMessage = document.querySelector('.error-message');
 		const formSection = document.querySelector('.form-section');
 		const successMessage = document.querySelector('.success-message');
-		const dismissBtn = document.querySelector('#dismissBtn');
+		const dismissBtn = document.getElementById('dismissBtn');
+		const inputEmail = document.getElementById('inputEmail');
 
 		const emailPattern = new RegExp(emailAddress.pattern);
 		const testPattern = emailPattern.test(emailAddress.value);
@@ -19,6 +20,7 @@ const subscribe = () => {
 			emailAddress.classList.remove('error');
 			formSection.style.display = 'none';
 			successMessage.style.display = 'flex';
+			inputEmail.textContent = emailAddress.value;
 		}
 
 		dismissBtn.addEventListener('click', () => {
